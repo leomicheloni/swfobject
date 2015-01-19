@@ -815,4 +815,12 @@ var swfobject = function () {
         version: "2.3"
 
     };
+    
+	//AMD module support
+	if (typeof define === "function" && define.amd ) {
+		define("swfobject", [], function() {
+			return jQuery;
+		});
+	}
+
 }();
